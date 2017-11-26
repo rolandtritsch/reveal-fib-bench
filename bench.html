@@ -50,7 +50,7 @@
               </ul>
 	          </aside>
 	        </section>
-	        <section id="title">
+	        <section>
 	          <h2>Fun with Fibonacci</h2>
 	          <h3>A talk by Roland Tritsch</h3>
 	          <img src="./images/trump.jpg" width="30%"/>
@@ -63,26 +63,112 @@
               </ul>
 	          </aside>
 	        </section>
+	        <section>
+	          <h2>Who, what, why</h2>
+            <ul>
+              <li>Roland - VP Engineering @ Nitro</li>
+              <li>We make documents smarter (Micro-Services, Scala, Spark, ..., ML/NLP)</li>
+              <li>Nitro Enterprise Launch - Q1 2018 (Hardening, ...)</li>
+            </ul>
+	          <aside class="notes">
+	          </aside>
+	        </section>
 	      </section>
 
 	      <section>
  	        <section>
-	          <h2>Confession (I)</h2>
-	          <img src="./images/haskell.png" width="30%"/>
+	          <h2>TTTA :)</h2>
+            <ul>
+              <li>Micro-Benchmarking</li>
+              <li>Fibonacci Sequence</li>
+              <li>Haskell, Scala, Scala-Native</li>
+            </ul>
             <aside class="notes">
-              <ul>
-                <li>This started with Haskell :) ...</li>
-              </ul>
 	          </aside>
 	        </section>
  	        <section>
-	          <h2>Confession (II)</h2>
-            <p>(Only) Three ways to implement it ...</p>
-	          <ul>
-	            <li>Memonic</li>
-	            <li>Lazy</li>
-	            <li>Constant</li>
-	          </ul>
+	          <h2>Micro-Benchmarking (Disclaimer)</h2>
+            <p align="center">
+              We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. - Donal Knuth
+            </p>
+            <ul>
+              <li>Heisenberg @ Work :)</li>
+              <li>Absolut vs. Relative</li>
+              <li>Use with care!!!</li>
+            </ul>
+            <aside class="notes">
+	          </aside>
+	        </section>
+ 	        <section>
+	          <h2>Fibonacci</h2>
+            <ul>
+              <li>Simple</li>
+              <li>Stream</li>
+              <li>Fast Stream</li>
+              <li>Constant</li>
+            </ul>
+            <aside class="notes">
+	          </aside>
+	        </section>
+ 	        <section>
+	          <h2>Haskell</h2>
+            <ul>
+              <li>Stack/Cabal</li>
+              <li>Criterion</li>
+            </ul>
+            <aside class="notes">
+	          </aside>
+	        </section>
+ 	        <section>
+	          <h2>Scala</h2>
+            <ul>
+              <li>Sbt/Scala-Meter</li>
+              <li>Scala-Meter</li>
+            </ul>
+            <aside class="notes">
+	          </aside>
+	        </section>
+ 	        <section>
+	          <h2>Scala-Native</h2>
+            <ul>
+              <li>Sbt</li>
+              <li>???</li>
+            </ul>
+            <aside class="notes">
+	          </aside>
+	        </section>
+ 	        <section>
+	          <h2>Results</h2>
+            <table>
+              <tr>
+                <th></th>
+                <th>Simple</th>
+                <th>Stream</th>
+                <th>Fast</th>
+                <th>Constant</th>
+              </tr>
+              <tr>
+                <td>Haskell(20)</td>
+                <td>> 5000</td>
+                <td>???</td>
+                <td>???</td>
+                <td>< 500</td>
+              </tr>
+              <tr>
+                <td>Scala</td>
+                <td>> 100000</td>
+                <td>6000</td>
+                <td>3000</td>
+                <td>< 500</td>
+              </tr>
+              <tr>
+                <td>Native</td>
+                <td>> 7500</td>
+                <td>22500</td>
+                <td>1050</td>
+                <td>< 500</td>
+              </tr>
+            </table>
             <aside class="notes">
 	          </aside>
 	        </section>
@@ -194,7 +280,7 @@
       // The "normal" size of the presentation, aspect ratio will be preserved
       // when the presentation is scaled to fit different resolutions. Can be
       // specified using percentage units.
-      width: '100%',
+      width: '80%',
       //height: '50%',
 
       // Factor of the display size that should remain empty around the content

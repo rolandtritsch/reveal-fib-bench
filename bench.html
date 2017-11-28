@@ -66,7 +66,7 @@
 	        <section>
 	          <h2>Who, what, why</h2>
             <ul>
-              <li>Roland - VP Engineering @ Nitro</li>
+              <li>[Roland](http://www.tritsch.org/about) - VP Engineering @ [Nitro](https://engineering.gonitro.com/our-values)</li>
               <li>We make documents smarter (Micro-Services, Scala, Spark, ..., ML/NLP)</li>
               <li>Nitro Enterprise Launch - Q1 2018 (Hardening, ...)</li>
             </ul>
@@ -87,7 +87,7 @@
 	          </aside>
 	        </section>
  	        <section>
-	          <h2>Micro-Benchmarking (Disclaimer)</h2>
+	          <h2>[Micro-Benchmarking](http://scalameter.github.io/home/gettingstarted/0.7) (Disclaimer)</h2>
             <p align="center">
               We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. - Donal Knuth
             </p>
@@ -100,36 +100,36 @@
 	          </aside>
 	        </section>
  	        <section>
-	          <h2>Fibonacci</h2>
+	          <h2>[Fibonacci](https://en.wikipedia.org/wiki/Fibonacci_number)</h2>
             <ul>
-              <li>Simple</li>
-              <li>Stream</li>
-              <li>Fast Stream</li>
-              <li>Constant</li>
+              <li>Simple - fib n = fib (n - 1) + fib (n - 2)</li>
+              <li>Stream - Infinite (lazy) list. Using [zipWith](http://www.scala-lang.org/api/2.12.3/scala/collection/immutable/Stream.html)</li>
+              <li>Fast Stream - Infinite (lazy) list. Using self reference</li>
+              <li>Constant - [Binet](https://en.wikipedia.org/wiki/Jacques_Philippe_Marie_Binet) :)</li>
             </ul>
             <aside class="notes">
 	          </aside>
 	        </section>
  	        <section>
-	          <h2>Haskell</h2>
+	          <h2>[Haskell](https://github.com/rolandtritsch/haskell-fib-bench)</h2>
             <ul>
-              <li>Stack/Cabal</li>
+              <li>Stack</li>
               <li>Criterion</li>
             </ul>
             <aside class="notes">
 	          </aside>
 	        </section>
  	        <section>
-	          <h2>Scala</h2>
+	          <h2>[Scala](https://github.com/rolandtritsch/scala-fib-bench)</h2>
             <ul>
-              <li>Sbt/Scala-Meter</li>
+              <li>Sbt</li>
               <li>Scala-Meter</li>
             </ul>
             <aside class="notes">
 	          </aside>
 	        </section>
  	        <section>
-	          <h2>Scala-Native</h2>
+	          <h2>[Scala-Native](https://github.com/rolandtritsch/scala-native-bench)</h2>
             <ul>
               <li>Sbt</li>
               <li>???</li>
@@ -142,31 +142,136 @@
             <table>
               <tr>
                 <th></th>
-                <th>Simple</th>
-                <th>Stream</th>
-                <th>Fast</th>
-                <th>Constant</th>
+                <th>Simple(30)(ms)</th>
+                <th>Stream(30000)(ms)</th>
+                <th>Fast (30000)(ms)</th>
+                <th>Constant(30000)(ms)</th>
               </tr>
               <tr>
-                <td>Haskell(20)</td>
-                <td>> 5000</td>
-                <td>???</td>
-                <td>???</td>
-                <td>< 500</td>
+                <td>Haskell</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
               </tr>
               <tr>
                 <td>Scala</td>
-                <td>> 100000</td>
-                <td>6000</td>
-                <td>3000</td>
-                <td>< 500</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
               </tr>
               <tr>
                 <td>Native</td>
-                <td>> 7500</td>
-                <td>22500</td>
-                <td>1050</td>
-                <td>< 500</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+            <aside class="notes">
+	          </aside>
+	        </section>
+ 	        <section>
+	          <h2>Results</h2>
+            <table>
+              <tr>
+                <th></th>
+                <th>Simple(30)(ms)</th>
+                <th>Stream(30000)(ms)</th>
+                <th>Fast (30000)(ms)</th>
+                <th>Constant(30000)(ms)</th>
+              </tr>
+              <tr>
+                <td>Haskell</td>
+                <td>6.0</td>
+                <td>0.070</td>
+                <td>0.080</td>
+                <td>0.001</td>
+              </tr>
+              <tr>
+                <td>Scala</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Native</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+            <aside class="notes">
+	          </aside>
+	        </section>
+ 	        <section>
+	          <h2>Results</h2>
+            <table>
+              <tr>
+                <th></th>
+                <th>Simple(30)(ms)</th>
+                <th>Stream(30000)(ms)</th>
+                <th>Fast (30000)(ms)</th>
+                <th>Constant(30000)(ms)</th>
+              </tr>
+              <tr>
+                <td>Haskell</td>
+                <td>6.0</td>
+                <td>0.070</td>
+                <td>0.080</td>
+                <td>0.001</td>
+              </tr>
+              <tr>
+                <td>Scala</td>
+                <td>6.6</td>
+                <td>8.5</td>
+                <td>4.2</td>
+                <td>0.003</td>
+              </tr>
+              <tr>
+                <td>Native</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+            <aside class="notes">
+	          </aside>
+	        </section>
+ 	        <section>
+	          <h2>Results</h2>
+            <table>
+              <tr>
+                <th></th>
+                <th>Simple(30)(ms)</th>
+                <th>Stream(30000)(ms)</th>
+                <th>Fast (30000)(ms)</th>
+                <th>Constant(30000)(ms)</th>
+              </tr>
+              <tr>
+                <td>Haskell</td>
+                <td>6.0</td>
+                <td>0.070</td>
+                <td>0.080</td>
+                <td>0.001</td>
+              </tr>
+              <tr>
+                <td>Scala</td>
+                <td>6.6</td>
+                <td>8.5</td>
+                <td>4.2</td>
+                <td>0.003</td>
+              </tr>
+              <tr>
+                <td>Native</td>
+                <td>72.0</td>
+                <td>34.0</td>
+                <td>13.0</td>
+                <td>0.001</td>
               </tr>
             </table>
             <aside class="notes">
@@ -178,9 +283,9 @@
 	        <section>
 	          <h2>Summary & Take-aways</h2>
 	          <ul>
-	            <li>???</li>
-	            <li>???</li>
-	            <li>???</li>
+	            <li>Haskell < Scala < Scala-Native</li>
+	            <li>Implementation < Language</li>
+	            <li>May the Donal be with you :)</li>
 	          </ul>
 	          <aside class="notes">
 	          </aside>
